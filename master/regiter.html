@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="CSS/style.css" rel="stylesheet">
+ </head>  
+<body>
+      <!--Section-Header-->
+      <nav class="navbar navbar-expand-sm header-section">
+        <div class="container header-section-item">
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+           </button><!--button-navbar-toggler-->
+          <div class="collapse navbar-collapse nav-list nav-list-header" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#connect-us">تواصل معنا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#Depart">اقسام المستشفى</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#Section-infro">نبذة عن المستشفى</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#main-section">الرئيسة</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right logo-image" style="visibility: hidden;">
+            <li>
+              <a href="#"><img alt="Forestpin logo" src="./image/HOSPITAL.png" id="logofpin"></a>
+            </li>
+          </ul>
+           <ul class="nav navbar-nav navbar-right logo-image">
+            <li>
+              <a href="#"><img alt="Forestpin logo" src="./image/HOSPITAL.png" id="logofpin"></a>
+            </li>
+          </ul>
+          </div><!--nav-list-header-->
+        
+        </div><!--header-section-item-->
+      </nav><!--navbar-->
+      <!-----Main-Section-->
+    
+     <section class="reg-main  container-fluid mt-3">
+      <!-- <div class="container"> -->
+       <div class="reg-item  container-fluid"> 
+        <form action="">
+            <h2>حجز اون الاين</h2>
+               <label for="clinic" class="form-label name-lable"> *العيادات</label>
+                <input class="form-control" list="clinics" name="clinic" id="clinic" required>
+                <datalist id="clinics">
+                    <option value="الاورام">
+                     <option value="العظام"> 
+                    <option value="النساء و التوليد">
+                    <option value="الباطنةالعامة">
+                    <option value="الاطفال">
+                    <option value="رسم المخ والاعصاب والعضلات ومعمل النوم">
+                    <option value="التخاطب">
+                   <option value="السمعيات">
+                   <option value="الانف والاذن">  
+                  <option value="جراحه المخ و الاعصاب ">
+                  <option value="جراحه الاوعية الدموية ">  
+                  <option value="جراحة  التجميل">
+                   <option value="القدم السكرى">  
+                  <option value="الأطفالمتخصصة">
+                 <option value="الرمد">
+                <option value="الجراحةالعامة">  
+                 <option value="المسالك">
+                <option value="سونار المسالك">
+                <option value="الصدرية">
+                <option value="النفسية">
+                <option value="اختبار الذكاء">
+                <option value="امراض دم الكبار">
+                <option value="الكلى">
+                <option value="المناعة">  
+                <option value="سكر وغدد"> 
+               <option value="ذكورية">
+               <option value="عصبية  رجال و حريم"> 
+              <option value="متوطنة وجهاز الهضمى">
+               <option value="علاج طبيعى"> 
+               <option value="تصلب متعدد">
+              <option value="جراحةالقلب والصدر"> 
+              <option value="جراحة الأطفال">
+              <option value="الجلدية"> 
+              <option value="الروماتيزم">
+             <option value="القلب"> 
+      </datalist> 
+       
+      <div class="mb-3 mt-3">
+        <label for="name" class="form-label">  * الاسم</label>
+        <input type="name" class="form-control" id="email" placeholder="ادخل الاسم" name="name" required>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="phone" class="form-label"> *الهاتف</label>
+        <input type="phone" maxlength="11"  class="form-control" id="email" placeholder="ادخل الهاتف" name="phone" required>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">الايميل</label>
+        <input type="email" class="form-control" id="email" placeholder="ادخل الايميل" name="email">
+      </div>
+    <div class="mb-3 mt-3">
+      <label for="comment" class="form-label">الوصف</label>
+      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+    </div>
+    <h3>استعراض المواعيد</h3>
+    <div class="mb-3 mt-3 group-buton">
+     <button type="reset" class="btn btn-1 btn-Gainsboro">الغاء</button>
+     <button type="submit" class="btn btn-primary  btn-2">ارسال</button>
+    </div>
+     <div class="mb-3 mt-3">
+     <button type="button" class="btn  btn-3" > <a href="table.html">برجاء الضغط هنا للحصول على جدول العيادات الخارجية</a></button>
+    </div>
+         </form>
+        </div><!--reg-item-->
+      <!-- </div>container -->
+     </section>
+  
+</body>
+</html>
