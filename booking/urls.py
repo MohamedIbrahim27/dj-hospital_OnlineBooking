@@ -9,4 +9,5 @@ app_name='booking'
 
 urlpatterns = [
     path('BookingOnline' , views.BookingOnline , name='BookingOnline'),
+    path('BookingOnline/outpatient_schedule' , views.outpatient_schedule , name='outpatient_schedule'),
 ]

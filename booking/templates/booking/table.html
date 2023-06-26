@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="container mt-3 table-page">
+    <h2 class="tabele-title">مستشفى جامعة بنى سويف</h2>
+    <h3 class="table-head">جدول العيادات الخارجية</h3>
+    <div class="table-responsive-sm">
+        <table class="table table-striped table-clinic bg.info">
+            <thead>
+                <tr>
+                    <th>ايام العمل </th>
+                    <th>عيادات المبنى القديم</th>
+                    <th>الادوار</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for schedul in schedule  %}
+                    <tr>
+                        <td>
+                            {% for workday in schedul.workdays.all %}
+                                {{ workday.name }}
+                            {% endfor %}
+                        </td>
+                        <td>{{schedul.clinics}}</td>
+                        <td>{{schedul.floor}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock body %}

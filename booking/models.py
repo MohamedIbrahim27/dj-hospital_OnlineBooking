@@ -45,16 +45,13 @@ class WorkDay(models.Model):
         return self.name
 
 class Outpatient_schedule(models.Model):
-    clinics=models.ForeignKey(Clinics,on_delete=models.CASCADE)
+    clinics=models.ForeignKey(Clinics,on_delete=models.CASCADE,limit_choices_to={'available': True})
     floor=models.CharField(max_length=30)
     workdays=models.ManyToManyField(WorkDay, blank=True, related_name='work_days')
 
     class Meta:
         verbose_name = _("Outpatient_schedule")
         verbose_name_plural = _("Outpatient_schedules")
-
-    def __str__(self):
-        return f"{self.clinics} - {self.floor} - {self.workdays}"
 
     # def get_absolute_url(self):
     #     return reverse("Outpatient_schedule_detail", kwargs={"pk": self.pk})
