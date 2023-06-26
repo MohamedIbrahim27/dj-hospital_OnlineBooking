@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body %}
-
+<style>
+    .navbar{
+        display: none;
+    }
+</style>
 <div class="container mt-3 table-page">
     <h2 class="tabele-title">مستشفى جامعة بنى سويف</h2>
     <h3 class="table-head">جدول العيادات الخارجية</h3>
@@ -15,16 +19,16 @@
                 </tr>
             </thead>
             <tbody>
-                {% for schedul in schedule  %}
-                    <tr>
-                        <td>
-                            {% for workday in schedul.workdays.all %}
-                                {{ workday.name }}
-                            {% endfor %}
-                        </td>
-                        <td>{{schedul.clinics}}</td>
-                        <td>{{schedul.floor}}</td>
-                    </tr>
+                {% for schedul in schedule %}
+                <tr>
+                    <td>
+                        {% for workday in schedul.workdays.all %}
+                        {{ workday.name }}
+                        {% endfor %}
+                    </td>
+                    <td>{{schedul.clinics}}</td>
+                    <td>{{schedul.floor}}</td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>

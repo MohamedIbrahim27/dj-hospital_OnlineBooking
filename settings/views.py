@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 # Create your views here.
 from inquiries_complaints.models import inquiries
+from.models import settings
 
 
 def home(request):
@@ -17,4 +18,6 @@ def home(request):
         submit.save()
         messages.success(request, 'Information send successfully')
         return redirect('/')
-    return render(request,'settings/index.html')
+    informatins=settings.objects.first()
+    return render(request,'settings/index.html',
+                    {'informatins':informatins})
